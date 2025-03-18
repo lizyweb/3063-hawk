@@ -1,0 +1,606 @@
+:root {
+  --brand: #5176fc;
+  --sub: #3bc6ff;
+  --second: #2e00a9;
+  --body: #516171;
+  --border: rgba(0,0,0,0.08);
+  --shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/*** Section Title ***/
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::before {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 2px;
+  top: 50%;
+  left: -55px;
+  margin-top: -1px;
+  background: var(--brand);
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 2px;
+  top: 50%;
+  right: -55px;
+  margin-top: -1px;
+  background: var(--brand);
+}
+
+.section-title.text-start::before,
+.section-title.text-end::after {
+  display: none;
+}
+
+.ff-secondary {
+  font-family: 'Pacifico', cursive;
+}
+
+
+/*** Carousel Hero Header Start ***/
+.header-carousel {
+  position: relative; 
+}
+
+.header-carousel .owl-nav .owl-prev {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--brand);
+  color: var(--bs-white);
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.header-carousel .owl-nav .owl-next {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--brand);
+  color: var(--bs-white);
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+  transition: 0.5s;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+  box-shadow: inset 150px 0 0 0 var(--bs-light) !important;
+  color: var(--brand) !important;
+}
+
+@media (max-width: 576px) {
+  .header-carousel .owl-nav .owl-prev,
+  .header-carousel .owl-nav .owl-next {
+      top: 630px;
+      transition: 0.5s;
+  }
+
+  .header-carousel .header-carousel-item .carousel-caption .carousel-caption-content {
+      width: 95% !important;
+  }
+
+}
+
+.header-carousel .header-carousel-item,
+.header-carousel .header-carousel-item img {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  /* margin-top: 95px; */
+  display: block;
+  object-fit: cover;
+  transition: 0.5s;
+
+}
+
+.header-carousel .header-carousel-item .carousel-caption h1{
+  color: var(--sub);
+  font-weight: 600;
+  font-family: Foobar Pro;
+}
+
+@media (max-width: 992px) {
+  .header-carousel .header-carousel-item,
+  .header-carousel .header-carousel-item img {
+      margin-top: 0;
+      transition: 0.5s;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .header-carousel .owl-nav .owl-prev,
+  .header-carousel .owl-nav .owl-next {
+      margin-top: 50px;
+  }
+}
+
+.header-carousel .header-carousel-item .carousel-caption {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .5);
+}
+
+.header-carousel .header-carousel-item .carousel-caption .carousel-caption-content {
+  position: relative;
+  width: 75%;
+  
+}
+/*** Carousel Hero Header End ***/
+
+/*--------------------------------------------------------------
+
+# Cta
+
+--------------------------------------------------------------*/
+
+.cta {
+
+  /* background: linear-gradient(to right,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/image-2/vector1.jpg") fixed center center; */
+  background: linear-gradient(to right, rgb(46,0,169), rgb(79,118,255)) ;
+
+  background-size: cover;
+
+  padding: 120px 0;
+
+  /* margin-bottom: 50px; */
+
+}
+
+
+
+.cta h3 {
+
+  color: #fff;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+}
+
+
+
+.cta p {
+
+  color: #fff;
+
+}
+
+
+
+.cta .cta-btn {
+
+  font-family: "Raleway", sans-serif;
+
+  text-transform: uppercase;
+
+  font-weight: 500;
+
+  font-size: 15px;
+
+  letter-spacing: 0.5px;
+
+  display: inline-block;
+
+  padding: 8px 26px;
+
+  border-radius: 2px;
+
+  transition: 0.5s;
+
+  margin: 10px;
+
+  border-radius: 50px;
+
+  border: 2px solid white;
+
+  color: #fff;
+
+}
+
+
+
+.cta .cta-btn:hover {
+
+  background: white;
+  border: 2px solid white;
+  color: rgb(0, 0, 0);
+
+}
+
+
+
+@media (max-width: 1024px) {
+
+  .cta {
+
+    background-attachment: scroll;
+
+  }
+
+}
+
+
+
+@media (min-width: 769px) {
+
+  .cta .cta-btn-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+  }
+
+}
+
+.cta-one {
+
+  background: url("../img/image-2/slide3.jpg") fixed center center;
+
+  background-size: cover;
+
+  padding: 120px 0;
+
+  margin-bottom: 50px;
+
+}
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-dots {
+  height: 40px;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border: 2px solid var(--brand);
+  transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+  width: 30px;
+  height: 30px;
+  background: var(--brand);
+}
+
+.testimonial{
+  border: 2px solid var(--brand);
+  border-radius: 15px;
+}
+
+/*** Tour Booking Start ***/
+.booking {
+  background: var(--sub) ;
+  /* background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; */
+  
+}
+
+.booking .container .section-booking-title {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  color: black;
+}
+
+.booking .container .section-booking-title::before {
+  content: "";
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: -50px;
+  border: 1px solid black !important;
+}
+
+.booking .container form .btn.btn-primary {
+  box-shadow: inset 0 0 0 0 var(--brand);
+  background-color: var(--sub);
+  /* border: 1px solid var(--sub); */
+}
+
+.booking .container form .btn.btn-primary:hover {
+  box-shadow: inset 800px 0 0 0 black !important;
+  color: white !important;
+  /* border: 1px solid var(--sub); */
+}
+
+.btn.btn-light {
+  box-shadow: inset 0 0 0 0 var(--brand);
+}
+
+.btn.btn-light:hover {
+  box-shadow: inset 300px 0 0 0 var(--brand);
+  color: var(--bs-light) !important;
+}
+
+
+/*** Tour Booking end ***/
+
+/**Courses**/
+
+.mv{
+  overflow: hidden;
+}
+.mv-img{
+  overflow: hidden;
+}
+.mv-img img{
+  object-fit: cover;
+}
+.mv .mv-row .mv-img img{
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+}
+.mv .mv-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 991px){
+  .mv-row .mission-content{
+    margin-bottom: 70px;
+  }
+  .mv-row .mv-content{
+    margin-bottom: 30px;
+  }
+  .mv .mv-row{
+    margin-bottom: 50px;
+  }
+  .mv .mv-row .mv-img{
+    margin-bottom: 50px;
+    order: 1;
+  }
+  .mv .mv-row .mv-content{
+    order: 2;
+  }
+}
+
+@media (max-width: 370px){
+  .mv .mv-row .mv-img, .mv .mv-row .mv-content{
+    width: 100%;
+  }
+}
+
+/* Path */
+
+.banner-area {
+
+  position: relative;
+
+  min-height: 300px;
+
+  color: #fff;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../img/image-2/t-shirt.avif) ;
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+}
+
+
+
+.banner-title {
+
+  color: #fff;
+
+  text-transform: uppercase;
+
+  font-size: 38px;
+
+  font-weight: 900;
+
+}
+
+
+
+@media (max-width: 767px) {
+
+  .banner-title {
+
+    font-size: 48px;
+
+  }
+
+}
+
+
+
+@media (max-width: 575px) {
+
+  .banner-title {
+
+    font-size: 32px;
+
+  }
+
+}
+
+
+
+.banner-text {
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 0;
+
+  right: 0;
+
+  max-width: 1170px;
+
+  margin: 0 auto;
+
+  width: 100%;
+
+  z-index: 1;
+
+  -webkit-transform: translateY(-50%);
+
+          transform: translateY(-50%);
+
+}
+
+
+
+.banner-heading {
+
+  text-align: center;
+
+}
+
+
+
+.breadcrumb {
+
+  padding: 0;
+
+  background: none;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  font-size: 12px;
+
+}
+
+
+
+.breadcrumb li a,
+
+.breadcrumb .breadcrumb-item,
+
+.breadcrumb li a:focus {
+
+  color: #fff !important;
+
+  text-decoration: none;
+
+}
+
+
+
+.breadcrumb li a:hover {
+
+  text-decoration: underline;
+
+}
+
+
+
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+
+  color: #fff;
+
+}
+
+
+@media only screen and (min-width: 967px) {
+  .design-1{
+    text-align: center;
+  }
+  .rl-space{
+    padding: 0px 120px;
+  }
+  .rl-space-fluid{
+    padding: 0px 220px;
+  }
+}
+
+.design-h2{
+  /* font-weight: 900; */
+  color: var(--brand);
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.info1{
+  background: var(--sub) ;
+  padding: 50px 20px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.info .info2{
+  height: 500px;
+}
+
+.info .info1 h1{
+  font-family: "Roboto Slab", sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+  .info .info2{
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .info .info1{
+    padding: 50px 20px;
+  }
+  .info .info1 h1{
+    font-size: 25px;
+    padding-bottom: 20px;
+  }
+  .info .info1 h4{
+    font-size: 14px;
+  }
+}
